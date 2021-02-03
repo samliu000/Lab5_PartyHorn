@@ -8,6 +8,7 @@ const volumeBar = document.getElementById('volume-slider');
 const audioPlay = document.getElementById('horn-sound');
 const volumeIcon = document.getElementById('volume-image');
 const audioSelection = document.getElementById('audio-selection');
+const soundImage = document.getElementById('sound-image');
 
 // update volume bar when user inputs in the box
 volumeInput.addEventListener('input', updateVolumeBar);
@@ -51,11 +52,14 @@ function changeSound() {
 
     if(carHorn.checked == true) {
         audioPlay.src="./assets/media/audio/car-horn.mp3";
+        soundImage.src="./assets/media/images/car-horn.svg";
     }
     else if(partyHorn.check == true) {
         audioPlay.src="./assets/media/audio/party-horn.mp3";
+        soundImage.src="./assets/media/images/party-horn.svg";
     }
     else {
         audioPlay.src="./assets/media/audio/air-horn.mp3";
+        soundImage.src="./assets/media/images/air-horn.svg";
     }
 }
