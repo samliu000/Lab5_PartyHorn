@@ -17,7 +17,7 @@ function updateVolumeBar(){
 }
 
 // update volume box when slider changes
-volumeBar.addEventListener('mouseup', updateVolumeText);
+volumeBar.addEventListener('drag', updateVolumeText);
 function updateVolumeText() {
     volumeInput.value = volumeBar.value;
     audioPlay.volume = volumeBar.value/100;
