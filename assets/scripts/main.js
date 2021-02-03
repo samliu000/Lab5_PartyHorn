@@ -52,7 +52,7 @@ function changeSound() {
 
     if(carHorn.checked == true) {
         audioPlay.src="./assets/media/audio/car-horn.mp3";
-        soundImage.src="./assets/media/images/car-horn.svg";
+        soundImage.src="./assets/media/images/car.svg";
     }
     else if(partyHorn.checked == true) {
         audioPlay.src="./assets/media/audio/party-horn.mp3";
