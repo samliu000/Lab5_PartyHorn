@@ -13,7 +13,8 @@ volumeInput.addEventListener('input', updateVolumeBar);
 function updateVolumeBar(){
     volumeBar.value = volumeInput.value;
     audioPlay.volume = volumeInput.value/100;
-    volumeIcon.src="./assets/media/icons/volume-level-2.svg";
+    
+    updateVolumeIcon(volumeInput.value);
 }
 
 // update volume box when slider changes
@@ -22,4 +23,21 @@ function updateVolumeText() {
     volumeInput.value = volumeBar.value;
     audioPlay.volume = volumeBar.value/100;
     volumeIcon.src="./assets/media/icons/volume-level-1.svg";
+
+    updateVolumeIcon(volumeBar.value);
+}
+
+function updateVolumeIcon(vol){
+    if(vol >= 67) {
+        volumeIcon.src="./assets/media/icons/volume-level-3.svg";
+    }
+    else if(vol >= 34) {
+        volumeIcon.src="./assets/media/icons/volume-level-2.svg";
+    }
+    else if(vol >= 1) {
+        volumeIcon.src="./assets/media/icons/volume-level-1.svg";
+    }
+    else {
+        volumeIcon.src="./assets/media/icons/volume-level-0.svg";
+    }
 }
