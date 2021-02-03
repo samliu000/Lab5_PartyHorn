@@ -13,7 +13,6 @@ volumeInput.addEventListener('input', updateVolumeBar);
 function updateVolumeBar(){
     volumeBar.value = volumeInput.value;
     audioPlay.volume = volumeInput.value/100;
-    
     updateVolumeIcon(volumeInput.value);
 }
 
@@ -22,8 +21,6 @@ volumeBar.addEventListener('mouseup', updateVolumeText);
 function updateVolumeText() {
     volumeInput.value = volumeBar.value;
     audioPlay.volume = volumeBar.value/100;
-    volumeIcon.src="./assets/media/icons/volume-level-1.svg";
-
     updateVolumeIcon(volumeBar.value);
 }
 
