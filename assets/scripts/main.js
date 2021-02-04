@@ -47,9 +47,9 @@ const airHorn = document.getElementById('radio-air-horn');
 const carHorn = document.getElementById('radio-car-horn');
 const partyHorn = document.getElementById('radio-party-horn');
 
-airHorn.addEventListener('change', changeSound(0));
-carHorn.addEventListener('change', changeSound(1));
-partyHorn.addEventListener('change', changeSound(2));
+airHorn.addEventListener('click', changeSound(0));
+carHorn.addEventListener('click', changeSound(1));
+partyHorn.addEventListener('click', changeSound(2));
 
 function changeSound(soundNum) {
     if(soundNum == 1) {
