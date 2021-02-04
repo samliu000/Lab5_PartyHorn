@@ -43,20 +43,18 @@ function updateVolumeIcon(vol){
 }
 
 // changes the sounds
-const airHorn = document.getElementById('radio-air-horn');
-const carHorn = document.getElementById('radio-car-horn');
-const partyHorn = document.getElementById('radio-party-horn');
+audioSelection.addEventListener('change', changeSound);
 
-airHorn.addEventListener('click', changeSound(0));
-carHorn.addEventListener('click', changeSound(1));
-partyHorn.addEventListener('click', changeSound(2));
+function changeSound() {
+    const airHorn = document.getElementById('radio-air-horn');
+    const carHorn = document.getElementById('radio-car-horn');
+    const partyHorn = document.getElementById('radio-party-horn');
 
-function changeSound(soundNum) {
-    if(soundNum == 1) {
+    if(carHorn.checked == true) {
         audioPlay.src="./assets/media/audio/car-horn.mp3";
         soundImage.src="./assets/media/images/car.svg";
     }
-    else if(soundNum == 2) {
+    else if(partyHorn.checked == true) {
         audioPlay.src="./assets/media/audio/party-horn.mp3";
         soundImage.src="./assets/media/images/party-horn.svg";
     }
