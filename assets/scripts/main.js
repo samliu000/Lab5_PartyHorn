@@ -45,8 +45,13 @@ function updateVolumeIcon(vol){
 
 // play sound
 playButton.addEventListener('click', function(event) {
-    event.preventDefault();
-    audioPlay.play();
+    if(volumeBar.value == 0 || volumeInput.value == 0) {
+
+    }
+    else {
+        event.preventDefault();
+        audioPlay.play();
+    }
 });
 
 // function to update the volume icon
