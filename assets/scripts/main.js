@@ -47,21 +47,12 @@ function updateVolumeIcon(vol){
 
 // play sound
 playButton.addEventListener('click', function(event) {
+    event.preventDefault();
     audioPlay.play();
 });
 
 // function to update the volume icon
-function updateVolumeIcon2(vol){
-    if(vol >= 67) {
-        volumeIcon.src="./assets/media/icons/volume-level-3.svg";
-    }
-    else if(vol >= 34) {
-        volumeIcon.src="./assets/media/icons/volume-level-2.svg";
-    }
-    else if(vol >= 1) {
-        volumeIcon.src="./assets/media/icons/volume-level-1.svg";
-    }
-    else {
-        volumeIcon.src="./assets/media/icons/volume-level-0.svg";
-    }
-}
+const partyHorn = document.getElementById('radio-party-horn');
+partyHorn.addEventListener('click', function(){
+    soundImage.src = "./assets/media/images/party-horn.svg";
+});
