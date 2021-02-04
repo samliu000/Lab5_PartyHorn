@@ -47,7 +47,6 @@ function updateVolumeIcon(vol){
 
 // play sound
 playButton.addEventListener('click', function(event) {
-    event.preventDefault();
     audioPlay.play();
 });
 
