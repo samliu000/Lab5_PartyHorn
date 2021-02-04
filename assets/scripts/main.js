@@ -46,10 +46,10 @@ function updateVolumeIcon(vol){
 
 
 // play sound
-playButton.addEventListener('click', playSound);
-function playSound(){
+playButton.addEventListener('click', function(event) {
+    event.preventDefault();
     audioPlay.play();
-}
+});
 
 // function to update the volume icon
 function updateVolumeIcon2(vol){
