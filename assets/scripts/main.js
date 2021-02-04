@@ -43,10 +43,26 @@ function updateVolumeIcon(vol){
     }
 }
 
+
+
 // play sound
 playButton.addEventListener('click', playSound);
 function playSound(){
     audioPlay.play();
 }
 
-//selector
+// function to update the volume icon
+function updateVolumeIcon2(vol){
+    if(vol >= 67) {
+        volumeIcon.src="./assets/media/icons/volume-level-3.svg";
+    }
+    else if(vol >= 34) {
+        volumeIcon.src="./assets/media/icons/volume-level-2.svg";
+    }
+    else if(vol >= 1) {
+        volumeIcon.src="./assets/media/icons/volume-level-1.svg";
+    }
+    else {
+        volumeIcon.src="./assets/media/icons/volume-level-0.svg";
+    }
+}
