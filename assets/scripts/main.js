@@ -53,6 +53,15 @@ playButton.addEventListener('click', function(event) {
 
 // function to update the volume icon
 const partyHorn = document.getElementById('radio-party-horn');
+const airHorn = document.getElementById('radio-air-horn');
+const carHorn = document.getElementById('radio-car-horn');
+
 partyHorn.addEventListener('click', function(){
     soundImage.src = "./assets/media/images/party-horn.svg";
+});
+airHorn.addEventListener('click', function(){
+    soundImage.src = "./assets/media/images/air-horn.svg";
+});
+carHorn.addEventListener('click', function(){
+    soundImage.src = "./assets/media/images/car.svg";
 });
