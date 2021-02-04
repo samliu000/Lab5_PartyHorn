@@ -43,8 +43,6 @@ function updateVolumeIcon(vol){
     }
 }
 
-
-
 // play sound
 playButton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -58,10 +56,13 @@ const carHorn = document.getElementById('radio-car-horn');
 
 partyHorn.addEventListener('click', function(){
     soundImage.src = "./assets/media/images/party-horn.svg";
+    audioPlay.src = "./assets/media/audio/party-horn.mp3";
 });
 airHorn.addEventListener('click', function(){
     soundImage.src = "./assets/media/images/air-horn.svg";
+    audioPlay.src = "./assets/media/audio/air-horn.mp3";
 });
 carHorn.addEventListener('click', function(){
     soundImage.src = "./assets/media/images/car.svg";
+    audioPlay.src = "./assets/media/audio/car-horn.mp3";
 });
