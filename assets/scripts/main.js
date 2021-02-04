@@ -9,6 +9,7 @@ const audioPlay = document.getElementById('horn-sound');
 const volumeIcon = document.getElementById('volume-image');
 const audioSelection = document.getElementById('audio-selection');
 const soundImage = document.getElementById('sound-image');
+const playButton = document.getElementById('honk-btn');
 
 // update volume bar when user inputs in the box
 volumeInput.addEventListener('input', updateVolumeBar);
@@ -42,5 +43,9 @@ function updateVolumeIcon(vol){
     }
 }
 
-// changes the sounds
+// play sound
+playButton.addEventListener('click', playSound);
+function playSound(){
+    audioPlay.play();
+}
 
